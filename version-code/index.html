@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atelier Rayon Libre — Réparation de vélos à Carouge</title>
+  <meta name="description" content="Atelier de réparation et d'entretien de vélos à Carouge (GE). Révision, crevaison, freins, vitesses.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. En-tête : nom, accroche, bouton « Appeler » -->
+  <header class="hero">
+    <h1>Atelier Rayon Libre</h1>
+    <p class="accroche">Réparation et entretien de vélos au cœur de Carouge. Rapide, soigné, au juste prix.</p>
+    <a class="bouton" href="tel:+41220000000">Appeler</a>
+  </header>
+
+  <main>
+    <!-- 2. Services et tarifs -->
+    <section id="services">
+      <h2>Services et tarifs</h2>
+      <ul class="services">
+        <li>
+          <h3>Révision complète</h3>
+          <p>Contrôle et réglage de tout le vélo, nettoyage de la transmission</p>
+          <p class="prix">120 CHF</p>
+        </li>
+        <li>
+          <h3>Réparation de crevaison</h3>
+          <p>Démontage, chambre à air neuve, remontage</p>
+          <p class="prix">25 CHF</p>
+        </li>
+        <li>
+          <h3>Réglage des freins</h3>
+          <p>Freins à patins ou à disque, par vélo</p>
+          <p class="prix">30 CHF</p>
+        </li>
+        <li>
+          <h3>Réglage des vitesses</h3>
+          <p>Dérailleurs avant et arrière</p>
+          <p class="prix">35 CHF</p>
+        </li>
+      </ul>
+      <p class="note">Pièces facturées en plus. Devis gratuit sur place.</p>
+    </section>
+
+    <!-- 3. Horaires -->
+    <section id="horaires">
+      <h2>Horaires</h2>
+      <table class="horaires">
+        <tbody>
+          <tr><th scope="row">Lundi</th><td>Fermé</td></tr>
+          <tr><th scope="row">Mardi – Vendredi</th><td>8h30 – 12h00 / 13h30 – 18h30</td></tr>
+          <tr><th scope="row">Samedi</th><td>9h00 – 16h00</td></tr>
+          <tr><th scope="row">Dimanche</th><td>Fermé</td></tr>
+        </tbody>
+      </table>
+      <p class="note"><strong>Fermetures exceptionnelles :</strong> Aucune fermeture prévue.</p>
+    </section>
+
+    <!-- 4. Accès : adresse et carte -->
+    <section id="acces">
+      <h2>Accès</h2>
+      <address>
+        Rue Saint-Joseph 12<br>
+        1227 Carouge (GE)
+      </address>
+      <p>Tram 12 et 18, arrêt « Carouge-Marché ». Parking vélos devant l'atelier.</p>
+      <iframe
+        class="carte"
+        title="Carte : Atelier Rayon Libre, Rue Saint-Joseph 12, Carouge"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=6.1350%2C46.1810%2C6.1450%2C46.1870&amp;layer=mapnik&amp;marker=46.1840%2C6.1400"
+        loading="lazy"></iframe>
+    </section>
+
+    <!-- 5. Formulaire de contact : nom, e-mail, message -->
+    <section id="contact">
+      <h2>Une question ? Écrivez-nous</h2>
+      <!-- Service de formulaire : FormPost (hébergé en Allemagne).
+           Formulaire lié au domaine gueppei.github.io : les envois depuis un autre domaine (ou en local) sont refusés -->
+      <form class="formulaire" action="https://www.formpost.eu/f/97b7b317" method="post">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" autocomplete="name" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <div class="consentement">
+          <input type="checkbox" id="consentement" name="consentement" required>
+          <label for="consentement">J'accepte que mes données soient utilisées uniquement pour répondre à ma demande (voir la <a href="confidentialite.html">politique de confidentialité</a>).</label>
+        </div>
+
+        <!-- Champ anti-spam FormPost : invisible, laissé vide par les humains -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button class="bouton" type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Atelier Rayon Libre · Rue Saint-Joseph 12, 1227 Carouge · <a href="confidentialite.html">Politique de confidentialité</a></p>
+  </footer>
+
+</body>
+</html>

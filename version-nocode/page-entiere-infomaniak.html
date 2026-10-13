@@ -1,0 +1,264 @@
+<!--
+  Page entière Atelier Rayon Libre, à coller dans UN SEUL bloc HTML de Site Creator.
+  Reprise de la version code (index.html + style.css), styles limités à la classe .rl.
+  Formulaire de contact retiré : ajouter le bloc « Formulaire » natif d'Infomaniak juste en dessous.
+-->
+<style>
+.rl {
+  --couleur-fond: #fafaf7;
+  --couleur-texte: #1f2421;
+  --couleur-secondaire: #5b6360;
+  --couleur-accent: #1d6b4f;
+  --couleur-accent-fonce: #14503b;
+  --couleur-carte: #ffffff;
+  --couleur-bordure: #dcdfdc;
+  --rayon: 8px;
+}
+.rl *, .rl *::before, .rl *::after {
+  box-sizing: border-box;
+}
+.rl {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+  background: var(--couleur-fond);
+}
+.rl h1,.rl h2,.rl h3 {
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+.rl a {
+  color: var(--couleur-accent);
+}
+.rl .bouton {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--rayon);
+  background: var(--couleur-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.rl .bouton:hover,.rl .bouton:focus-visible {
+  background: var(--couleur-accent-fonce);
+}
+.rl .bouton:focus-visible,.rl input:focus-visible,.rl textarea:focus-visible {
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 2px;
+}
+.rl .hero {
+  padding: 3rem 1rem;
+  background: var(--couleur-accent);
+  color: #fff;
+  text-align: center;
+}
+.rl .hero h1 {
+  font-size: 2rem;
+}
+.rl .accroche {
+  margin: 0 auto 1.5rem;
+  max-width: 32rem;
+}
+.rl .hero .bouton {
+  background: #fff;
+  color: var(--couleur-accent);
+}
+.rl .hero .bouton:hover,.rl .hero .bouton:focus-visible {
+  background: #e6f0ec;
+  outline-color: #fff;
+}
+.rl .rl-main section {
+  padding: 2.5rem 1rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.rl .note {
+  color: var(--couleur-secondaire);
+  font-size: 0.9rem;
+}
+.rl .services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.rl .services li {
+  padding: 1.25rem;
+  background: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+}
+.rl .services h3 {
+  font-size: 1.1rem;
+}
+.rl .services p {
+  margin: 0;
+}
+.rl .services .prix {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--couleur-accent);
+}
+.rl .horaires {
+  width: 100%;
+  border-collapse: collapse;
+}
+.rl .horaires th,.rl .horaires td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--couleur-bordure);
+  text-align: left;
+  vertical-align: top;
+}
+.rl .horaires th {
+  padding-right: 1rem;
+  font-weight: 600;
+}
+.rl address {
+  font-style: normal;
+  font-weight: 600;
+}
+.rl .carte {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+}
+.rl .formulaire {
+  display: grid;
+  gap: 0.5rem;
+}
+.rl .formulaire label {
+  font-weight: 600;
+}
+.rl .formulaire input[type="text"],.rl .formulaire input[type="email"],.rl .formulaire textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+  background: var(--couleur-carte);
+  font: inherit;
+}
+.rl .consentement {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.rl .consentement input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+.rl .consentement label {
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+.rl .formulaire .bouton {
+  justify-self: start;
+}
+.rl footer {
+  padding: 1.5rem 1rem;
+  border-top: 1px solid var(--couleur-bordure);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--couleur-secondaire);
+}
+@media (min-width: 768px) {
+.rl .hero {
+    padding: 5rem 2rem;
+  }
+.rl .hero h1 {
+    font-size: 3rem;
+  }
+.rl .rl-main section {
+    padding: 3.5rem 2rem;
+  }
+.rl .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+.rl .carte {
+    height: 380px;
+  }
+.rl .formulaire {
+    max-width: 36rem;
+  }
+}
+</style>
+<div class="rl">
+<div class="hero">
+    <h1>Atelier Rayon Libre</h1>
+    <p class="accroche">Réparation et entretien de vélos au cœur de Carouge. Rapide, soigné, au juste prix.</p>
+    <a class="bouton" href="tel:+41220000000">Appeler</a>
+  </div>
+
+  <div class="rl-main">
+    <!-- 2. Services et tarifs -->
+    <section id="services">
+      <h2>Services et tarifs</h2>
+      <ul class="services">
+        <li>
+          <h3>Révision complète</h3>
+          <p>Contrôle et réglage de tout le vélo, nettoyage de la transmission</p>
+          <p class="prix">120 CHF</p>
+        </li>
+        <li>
+          <h3>Réparation de crevaison</h3>
+          <p>Démontage, chambre à air neuve, remontage</p>
+          <p class="prix">25 CHF</p>
+        </li>
+        <li>
+          <h3>Réglage des freins</h3>
+          <p>Freins à patins ou à disque, par vélo</p>
+          <p class="prix">30 CHF</p>
+        </li>
+        <li>
+          <h3>Réglage des vitesses</h3>
+          <p>Dérailleurs avant et arrière</p>
+          <p class="prix">35 CHF</p>
+        </li>
+      </ul>
+      <p class="note">Pièces facturées en plus. Devis gratuit sur place.</p>
+    </section>
+
+    <!-- 3. Horaires -->
+    <section id="horaires">
+      <h2>Horaires</h2>
+      <table class="horaires">
+        <tbody>
+          <tr><th scope="row">Lundi</th><td>Fermé</td></tr>
+          <tr><th scope="row">Mardi – Vendredi</th><td>8h30 – 12h00 / 13h30 – 18h30</td></tr>
+          <tr><th scope="row">Samedi</th><td>9h00 – 16h00</td></tr>
+          <tr><th scope="row">Dimanche</th><td>Fermé</td></tr>
+        </tbody>
+      </table>
+      <p class="note"><strong>Fermetures exceptionnelles :</strong> Aucune fermeture prévue.</p>
+    </section>
+
+    <!-- 4. Accès : adresse et carte -->
+    <section id="acces">
+      <h2>Accès</h2>
+      <address>
+        Rue Saint-Joseph 12<br>
+        1227 Carouge (GE)
+      </address>
+      <p>Tram 12 et 18, arrêt « Carouge-Marché ». Parking vélos devant l'atelier.</p>
+      <iframe
+        class="carte"
+        title="Carte : Atelier Rayon Libre, Rue Saint-Joseph 12, Carouge"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=6.1350%2C46.1810%2C6.1450%2C46.1870&amp;layer=mapnik&amp;marker=46.1840%2C6.1400"
+        loading="lazy"></iframe>
+    </section>
+  </div>
+</div>

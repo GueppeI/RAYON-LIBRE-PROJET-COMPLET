@@ -1,0 +1,251 @@
+/* Styles mobile-first : écrire d'abord pour petit écran */
+
+:root {
+  --couleur-fond: #fafaf7;
+  --couleur-texte: #1f2421;
+  --couleur-secondaire: #5b6360;
+  --couleur-accent: #1d6b4f;
+  --couleur-accent-fonce: #14503b;
+  --couleur-carte: #ffffff;
+  --couleur-bordure: #dcdfdc;
+  --rayon: 8px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+  background: var(--couleur-fond);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: var(--couleur-accent);
+}
+
+/* Bouton (lien « Appeler » et bouton « Envoyer ») */
+.bouton {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--rayon);
+  background: var(--couleur-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bouton:hover,
+.bouton:focus-visible {
+  background: var(--couleur-accent-fonce);
+}
+
+.bouton:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 2px;
+}
+
+/* 1. En-tête */
+.hero {
+  padding: 3rem 1rem;
+  background: var(--couleur-accent);
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.accroche {
+  margin: 0 auto 1.5rem;
+  max-width: 32rem;
+}
+
+.hero .bouton {
+  background: #fff;
+  color: var(--couleur-accent);
+}
+
+.hero .bouton:hover,
+.hero .bouton:focus-visible {
+  background: #e6f0ec;
+  outline-color: #fff;
+}
+
+/* Sections */
+main section {
+  padding: 2.5rem 1rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.note {
+  color: var(--couleur-secondaire);
+  font-size: 0.9rem;
+}
+
+/* 2. Services et tarifs */
+.services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.services li {
+  padding: 1.25rem;
+  background: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+}
+
+.services h3 {
+  font-size: 1.1rem;
+}
+
+.services p {
+  margin: 0;
+}
+
+.services .prix {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--couleur-accent);
+}
+
+/* 3. Horaires */
+.horaires {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.horaires th,
+.horaires td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--couleur-bordure);
+  text-align: left;
+  vertical-align: top;
+}
+
+.horaires th {
+  padding-right: 1rem;
+  font-weight: 600;
+}
+
+/* 4. Accès */
+address {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.carte {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+}
+
+/* 5. Formulaire de contact */
+.formulaire {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.formulaire label {
+  font-weight: 600;
+}
+
+.formulaire input[type="text"],
+.formulaire input[type="email"],
+.formulaire textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+  background: var(--couleur-carte);
+  font: inherit;
+}
+
+.consentement {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.consentement input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.consentement label {
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.formulaire .bouton {
+  justify-self: start;
+}
+
+/* Pied de page */
+footer {
+  padding: 1.5rem 1rem;
+  border-top: 1px solid var(--couleur-bordure);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--couleur-secondaire);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hero {
+    padding: 5rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  main section {
+    padding: 3.5rem 2rem;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carte {
+    height: 380px;
+  }
+
+  .formulaire {
+    max-width: 36rem;
+  }
+}
